@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="274f22be901f4a18982cc9678af2ca6f" Name="Diagram1">
+        <EntityTypeShape EntityType="starModel.category_T" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="starModel.employe_Reg" Width="1.5" PointX="7.5" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="starModel.service" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="starModel.FK__service__ser_fk___267ABA7A" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="starModel.job" Width="1.5" PointX="5.375" PointY="3.5" />
+        <EntityTypeShape EntityType="starModel.vacancy" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="starModel.contact" Width="1.5" PointX="9.75" PointY="1.125" />
+        <EntityTypeShape EntityType="starModel.Blog" Width="1.5" PointX="3.5" PointY="4.875" />
+        <EntityTypeShape EntityType="starModel.comment" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="starModel.PKG" Width="1.5" PointX="9.5" PointY="3.5" />
+        <EntityTypeShape EntityType="starModel.client" Width="1.5" PointX="0.75" PointY="3.875" />
+        <AssociationConnector Association="starModel.FK__client__client_f__4F7CD00D" />
+        <AssociationConnector Association="starModel.FK__client__client_f__5070F446" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

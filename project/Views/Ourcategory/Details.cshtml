@@ -1,0 +1,18 @@
+﻿@model project.Models.category_T
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/shared/AdminMaster.cshtml";
+}
+
+<h2>Details</h2>
+
+
+
+<div class="row content-panel text-center">
+    <hr>
+    <h4 class="title"> @Html.DisplayFor(model => model.cat_title)  </h4>
+    <p> @Html.DisplayFor(model => model.cat_discrip) </p>
+    <hr>
+</div>
+

@@ -1,0 +1,189 @@
+﻿@model List<project.Models.employe_Reg>
+@{
+    ViewBag.Title = "dashboard";
+    Layout = "~/Views/shared/AdminMaster.cshtml";
+}
+<div class="row content-panel">
+    <h2 class="text-center">Welcome @Session["name"] </h2>
+</div>
+<hr>
+
+
+
+
+
+<div class="col-lg-12 main-chart">
+    <!--CUSTOM CHART START -->
+    <div class="border-head">
+        <h3>USER VISITS</h3>
+    </div>
+    <div class="custom-bar-chart">
+        <ul class="y-axis">
+            <li><span>10.000</span></li>
+            <li><span>8.000</span></li>
+            <li><span>6.000</span></li>
+            <li><span>4.000</span></li>
+            <li><span>2.000</span></li>
+            <li><span>0</span></li>
+        </ul>
+        <div class="bar">
+            <div class="title">JAN</div>
+            <div class="value tooltips" data-original-title="8.500" data-toggle="tooltip" data-placement="top">85%</div>
+        </div>
+        <div class="bar ">
+            <div class="title">FEB</div>
+            <div class="value tooltips" data-original-title="5.000" data-toggle="tooltip" data-placement="top">50%</div>
+        </div>
+        <div class="bar ">
+            <div class="title">MAR</div>
+            <div class="value tooltips" data-original-title="6.000" data-toggle="tooltip" data-placement="top">60%</div>
+        </div>
+        <div class="bar ">
+            <div class="title">APR</div>
+            <div class="value tooltips" data-original-title="4.500" data-toggle="tooltip" data-placement="top">45%</div>
+        </div>
+        <div class="bar">
+            <div class="title">MAY</div>
+            <div class="value tooltips" data-original-title="3.200" data-toggle="tooltip" data-placement="top">32%</div>
+        </div>
+        <div class="bar ">
+            <div class="title">JUN</div>
+            <div class="value tooltips" data-original-title="6.200" data-toggle="tooltip" data-placement="top">62%</div>
+        </div>
+        <div class="bar">
+            <div class="title">JUL</div>
+            <div class="value tooltips" data-original-title="7.500" data-toggle="tooltip" data-placement="top">75%</div>
+        </div>
+    </div>
+    </div>
+
+    <div class="row content-panel">
+        <div class="col-md-4 col-sm-4 mb">
+            <div class="darkblue-panel pn">
+                <div class="darkblue-header">
+                    <h5><a href="@Url.Action("Index","clients")">Clients</a></h5>
+                </div>
+                <h1 class="mt"><a href="@Url.Action("Index","clients")"><i class="fa fa-user fa-3x"></i></a></h1>
+                <p>+ 500 NEW Clients</p>
+                <footer>
+                    <div class="centered">
+                        <h5><i class="fa fa-trophy"></i> 17,988</h5>
+                    </div>
+                </footer>
+            </div>
+
+        </div>
+
+
+
+        <div class="col-lg-4 col-md-4 col-sm-4 mb">
+
+            <div class="instagram-panel pn">
+                <a href="@Url.Action("employee_edit","Employee")"> <i class="fa fa-address-book fa-4x"></i></a>
+                <p>
+                    Employees<br /> 
+                </p>
+                <p><i class="fa fa-comment"></i> 300 </p>
+            </div>
+        </div>
+
+
+
+        <div class="col-md-4 col-sm-4 mb">
+            <div class="darkblue-panel pn">
+                <div class="darkblue-header">
+                    <h5><a href="@Url.Action("job_view","vacancies")">Job Requests</a></h5>
+                </div>
+                <a href="@Url.Action("job_view","vacancies")"> <h1 class="mt"><i class="fa fa-user fa-3x"></i></h1></a>
+                <p> </p>
+                <footer>
+                    <div class="centered">
+                        <h5><i class="fa fa-trophy"></i> + 100 NEW</h5>
+                    </div>
+                </footer>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="row content-panel">
+
+        <div class="col-md-4 col-sm-4 mb">
+            <div class="weather pn">
+                <i class="fa fa-cloud fa-4x"></i>
+                <a href="@Url.Action("contact_view","vacancies")"><h2> Contact us </h2></a>
+                <h4><a href="@Url.Action("contact_view","vacancies")">New 50</a></h4>
+            </div>
+        </div>
+
+
+
+        <div class="col-lg-4 col-md-4 col-sm-4 mb">
+
+            <div class="grey-panel pn donut-chart">
+                <div class="grey-header">
+                    <h5>Packages</h5>
+                </div>
+                <a href="@Url.Action("Index","PKGs")"><p>  <h1 class="mt"><i class="fa fa-address-card fa-3x"></i></h1></p></a>
+                <p><b>All Packages</b></p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="small mt"></p>
+                        <p></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="small mt"></p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-lg-4 col-md-4 col-sm-4 mb">
+
+            <div class="grey-panel pn donut-chart">
+                <div class="grey-header">
+                    <h5></h5>
+                </div>
+                <a href="@Url.Action("Index","services")"><p>  <h1 class="mt"><i class="fa fa-area-chart fa-3x"></i></h1></p></a>
+                <p><b>Services</b></p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="small mt"></p>
+                        <p></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="small mt"></p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        @*<div class="col-lg-4 col-md-4 col-sm-4 mb">
+
+            <div class="product-panel-2 pn">
+                <div class="grey-header">
+                    <h5>Services</h5>
+                </div>
+                <a href="@Url.Action("Index","PKGs")"><p>  <h1 class="mt"><i class="fa fa-address-card fa-3x"></i></h1></p></a>
+                <p><b>All Services</b></p>
+                <div class="row">
+
+
+                </div>
+            </div>
+        </div>*@
+
+
+
+
+
+
+    </div>

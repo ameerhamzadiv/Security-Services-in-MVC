@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "profile";
+    Layout = "~/Views/shared/AdminMaster.cshtml";
+}
+
+<h2></h2>
+
+
+<div class="row mt">
+    <div class="col-lg-12">
+        <div class="row content-panel">
+            <div class="col-md-4 profile-text mt mb centered">
+                <div class="right-divider hidden-sm hidden-xs">
+                    <h4>@Session["grade"]</h4>
+                    <h6>Grade</h6>
+                    <h4>@Session["client"]</h4>
+                    <h6>Clients</h6>
+                    <h4>@Session["department"]</h4>
+                    <h6>Department</h6>
+                </div>
+            </div>
+            <!-- /col-md-4 -->
+            <div class="col-md-4 profile-text">
+                <h3> @Session["name"] </h3>
+                <h6>@Session["role"]</h6>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BA.</p>
+                <br>
+                <p></p>
+            </div>
+            <!-- /col-md-4 -->
+            <div class="col-md-4 centered">
+                <div class="profile-pic">
+                    <p><img src="~/EmpImages/@Session["img"]" class="img-circle"></p>
+                    <p>
+                       
+                    </p>
+                </div>
+            </div>
+            <!-- /col-md-4 -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /col-lg-12 -->
+</div>
+
+
+
+
+<!-- /tab-pane -->
+<div id="contact" class="tab-pane text-center">
+    <div class="row content-panel">
+
+        
+        @*<div class="col-md-6">
+            <div id="map"></div>
+        </div>*@
+        <!-- /col-md-6 -->
+        <div class="col-md-12 detailed">
+            <h4>Iformation</h4>
+            <div class="col-md-8 col-md-offset-2 mt" >
+
+                <p>
+                    Achievement  :  @Session["achievement"]<br />
+                </p>
+                <br>
+                <p>
+                    Education : @Session["education"]<br />
+                </p>
+                <br>
+                <p>
+                    Code : @Session["code"]<br />
+                </p>
+                <br>
+                <p>
+                    Password : @Session["password"]<br />
+                </p>
+                <br>
+                <p>
+                    @*Headquarters<br /> 844 Sutter Ave,<br /> 9003, New York.*@
+                </p>
+            </div>
+           
+            <div class="col-md-8 col-md-offset-2 mt">
+                <h4>Contacts</h4>
+                <br />
+                <p>
+                    Phone: @Session["number"]<br />
+                </p>
+                <br>
+                <p>
+                    Email: @Session["email"]<br />
+                </p>
+                <br>
+                <p>
+                    Address : @Session["address"]<br />
+                </p>
+                <br>
+            </div>
+        </div>
+        <!-- /col-md-6 -->
+    </div>
+    <!-- /row -->
+</div>
+<!-- /tab-pane -->

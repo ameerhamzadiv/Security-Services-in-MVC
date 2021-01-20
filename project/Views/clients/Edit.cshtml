@@ -1,0 +1,70 @@
+﻿@model project.Models.client
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/shared/AdminMaster.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.client_id)
+
+        <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label"> Name : </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.client_name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.client_name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label"> Email : </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.client_email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.client_email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label"> ServiceAvaid : </label>
+            <div class="col-md-10">
+                @Html.DropDownList("client_fk_Cat", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.client_fk_Cat, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label"> StafAsaint : </label>
+            <div class="col-md-10">
+                @Html.DropDownList("client_fk_ser", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.client_fk_ser, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label"> Message : </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.client_msg, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.client_msg, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Update" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+<div class="btn btn-warning btn-xs">
+    @Html.ActionLink("Back to List", "Index")
+</div>

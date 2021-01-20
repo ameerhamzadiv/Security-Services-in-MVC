@@ -1,0 +1,38 @@
+﻿@model project.Models.Blog
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/shared/AdminMaster.cshtml";
+}
+
+
+
+<h2 class="text-center">Blog</h2>
+
+<h3 class="text-center">Are you sure you want to delete this Blog ?</h3>
+<div class="content-panel text-center">
+    <hr>
+    <h4 class="title"> @Html.DisplayFor(model => model.b_title)  </h4>
+    <p> @Html.DisplayFor(model => model.b_Discrip) </p>
+    <p> <img src="~/blogimg/@Url.Content(Model.b_img)" width="100" height="100" /> </p>
+    <h4 class="title">  Date  </h4>
+    <p> @Html.DisplayFor(model => model.b_date) </p>
+
+    <hr>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <div class="btn btn-warning btn-xs">
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        </div>
+    }
+</div>
+
+
+

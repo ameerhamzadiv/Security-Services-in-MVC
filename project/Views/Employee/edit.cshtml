@@ -1,0 +1,136 @@
+﻿@model project.Models.employe_Reg
+
+@{
+    ViewBag.Title = "edit";
+    Layout = "~/Views/shared/AdminMaster.cshtml";
+}
+<div class="text-center">
+    <h2>Edit Employee </h2>
+</div>
+
+<hr />
+@using (Html.BeginForm("edit", "Employee", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4></h4>
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label">Name :</label>
+        <div class="col-md-4">
+            @Html.EditorFor(model => model.reg_name, new { htmlAttributes = new { @class = "form-control" } })
+
+        </div>
+
+        <label class="col-sm-1 col-sm-1 control-label">Role :</label>
+        <div class="col-md-4">
+            @Html.EditorFor(model => model.reg_role, new { htmlAttributes = new { @class = "form-control" } })
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label">Department :</label>
+        <div class="col-md-4">
+            @Html.EditorFor(model => model.reg_depart, new { htmlAttributes = new { @class = "form-control" } })
+
+        </div>
+
+        <label class="col-sm-1 col-sm-1 control-label">Clients :</label>
+        <div class="col-md-4">
+            @Html.EditorFor(model => model.reg_client, new { htmlAttributes = new { @class = "form-control" } })
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label">Grade :</label>
+        <div class="col-md-4">
+            @Html.EditorFor(model => model.reg_grade, new { htmlAttributes = new { @class = "form-control" } })
+
+        </div>
+
+        <label class="col-sm-1 col-sm-1 control-label">Education :</label>
+        <div class="col-md-4">
+            @Html.EditorFor(model => model.reg_education, new { htmlAttributes = new { @class = "form-control" } })
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label">Email :</label>
+        <div class="col-md-4">
+            @Html.EditorFor(model => model.reg_email, new { htmlAttributes = new { @class = "form-control" } })
+
+        </div>
+
+        <label class="col-sm-1 col-sm-1 control-label">Number :</label>
+        <div class="col-md-4">
+            @Html.EditorFor(model => model.reg_number, new { htmlAttributes = new { @class = "form-control" } })
+
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label">Achievement :</label>
+        <div class="col-md-4">
+            @Html.EditorFor(model => model.reg_achieve, new { htmlAttributes = new { @class = "form-control" } })
+
+        </div>
+
+        <label class="col-sm-1 col-sm-1 control-label">Code :</label>
+        <div class="col-md-4">
+            @Html.EditorFor(model => model.code, new { htmlAttributes = new { @class = "form-control" } })
+
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label">Address :</label>
+        <div class="col-md-9">
+            @Html.EditorFor(model => model.reg_address, new { htmlAttributes = new { @class = "form-control" } })
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label">Password :</label>
+        <div class="col-md-9">
+            @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control" } })
+
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label">Photo :</label>
+        <div class="col-md-9">
+            @Html.EditorFor(model => model.reg_img, new { htmlAttributes = new { @class = "form-control" } })
+            @*<input type="file" name="img" class="form-control" />*@
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-4 col-md-5">
+            <button type="submit" class="btn btn-theme btn-lg btn-block">Update</button>
+        </div>
+    </div>
+    <hr>
+</div>
+
+}
+
+<div class="btn btn-warning btn-xs">
+    @Html.ActionLink("Back to List", "employee_edit")
+</div>
+
+
+
+
+

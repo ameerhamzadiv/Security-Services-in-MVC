@@ -1,0 +1,94 @@
+﻿@model IEnumerable<project.Models.Blog>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/shared/AdminMaster.cshtml";
+}
+
+
+
+
+
+<h3>Blogs Details</h3>
+<div class="row mt">
+    <div class="col-lg-12">
+        <div class="content-panel">
+            <h4 class="btn btn-warning"> @Html.ActionLink("Add New", "Create")</h4>
+            <hr />
+            <section id="unseen">
+                <table class="table table-bordered table-striped table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Photo</th>
+                            <th>Title</th>
+                            <th class="numeric">Discription</th>
+                            <th>Date</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td> <img src="~/blogimg/@Url.Content(item.b_img)" width="100" height="100" /> </td>
+                            <td> @Html.DisplayFor(modelItem => item.b_title)</td>
+                            <td class="numeric"> @Html.DisplayFor(modelItem => item.b_Discrip)</td>
+                            <td> @Html.DisplayFor(modelItem => item.b_date)</td>
+
+
+                            <td>
+                                <div class=" btn btn-danger btn-xs"><i class="fa fa-trash-o">  @Html.ActionLink("Delete", "Delete", new { id = item.b_id })    </i>  </div>
+                                <div class=" btn btn-primary btn-xs"><i class="fa fa-pencil">  @Html.ActionLink("Edit", "Edit", new { id = item.b_id })        </i>  </div>
+                                <div class=" btn btn-success btn-xs"><i class="fa fa-check">   @Html.ActionLink("Details", "Details", new { id = item.b_id })  </i>  </div>
+
+
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                    <tbody></tbody>
+                </table>
+            </section>
+        </div>
+        <!-- /content-panel -->
+    </div>
+    <!-- /col-lg-4 -->
+</div>
+<!-- /row -->
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.b_title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.b_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.b_Discrip)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.b_title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.b_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.b_Discrip)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.b_id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.b_id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.b_id })
+            </td>
+        </tr>
+    }
+
+    </table>*@

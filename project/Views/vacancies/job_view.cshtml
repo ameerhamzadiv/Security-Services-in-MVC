@@ -1,0 +1,71 @@
+﻿@model IEnumerable<project.Models.job>
+
+@{
+    ViewBag.Title = "job_view";
+    Layout = "~/Views/shared/AdminMaster.cshtml";
+}
+
+
+<h3><i class="fa fa-angle-right"></i> Who Apply For Job</h3>
+<div class="row mt">
+    <div class="col-lg-12">
+        <div class="content-panel">
+            
+            <section id="unseen">
+                <table class="table table-bordered table-striped table-condensed">
+                    <thead>
+                        <tr>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                            <th class="numeric">Country</th> 
+                            <th class="numeric">Address</th>
+                            <th class="numeric">City</th>
+                            <th class="numeric">Qualification</th>
+                            <th class="numeric">Experiance</th>
+                            <th class="numeric">Job Name</th>
+                            <th class="numeric">Email</th>
+                            <th class="numeric">Number</th>
+                            <th class="numeric">Age</th>
+                            <th class="numeric">Gender</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+
+                                            <td> @Html.DisplayFor(modelItem => item.first_name)</td>
+                            <td class="numeric"> @Html.DisplayFor(modelItem => item.last_name)</td>
+                            <td class="numeric"> @Html.DisplayFor(modelItem => item.country)</td>
+                            <td class="numeric"> @Html.DisplayFor(modelItem => item.address)</td>
+                            <td class="numeric"> @Html.DisplayFor(modelItem => item.city)</td>
+                            <td class="numeric"> @Html.DisplayFor(modelItem => item.qolifi)</td>
+                            <td class="numeric"> @Html.DisplayFor(modelItem => item.expe)</td>
+                            <td class="numeric"> @Html.DisplayFor(modelItem => item.job_name)</td>
+                            <td class="numeric"> @Html.DisplayFor(modelItem => item.email)</td>
+                            <td class="numeric"> @Html.DisplayFor(modelItem => item.number)</td>
+                            <td class="numeric"> @Html.DisplayFor(modelItem => item.age)</td>
+                            <td class="numeric"> @Html.DisplayFor(modelItem => item.gender)</td>
+                            <td>
+                                @if (User.IsInRole("admin"))
+                                { 
+                              <div class=" btn btn-danger btn-xs"><i class="fa fa-trash-o">  @Html.ActionLink("Delete", "delete_job", new { id = item.id })</i>  </div>
+                              }
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                    <tbody></tbody>
+                </table>
+            </section>
+        </div>
+        <!-- /content-panel -->
+    </div>
+    <!-- /col-lg-4 -->
+</div>
+
+
+
+
+

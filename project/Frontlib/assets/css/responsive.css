@@ -1,0 +1,598 @@
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) { 
+
+    .header-right-overlay::before{
+        left: -260px
+    }
+    .slider-text{
+        width: 70%
+    }
+    .testimonial-info{
+        width: 45%
+    }
+    .about-left{
+        margin: 0
+    }
+    .notfound > h2{
+        left:-37px
+    }
+    .notfound > h3{
+        margin-top: 15px
+    }
+    .single-product-text{
+        padding: 10px
+    }
+    .product-button > a{
+        margin: 0
+    }
+    .product-thumb-info-image{
+        width: 55px
+    }
+    .product-thumb-info-content{
+        margin-top: 5px
+    }
+}
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+
+    .header-right-overlay{
+        display: none
+    }
+    .mobile-top-menu{
+        display: block
+    }
+    .site-logo {
+        text-align: center;
+        margin: 20px 0;
+        display: block
+    }
+    .header-right-top{
+        display: none
+    }
+    .mainmenu{
+        margin: 0
+    }
+    .header-search{
+        margin: 0
+    }
+    .single-service > h3{
+        font-size: 16px
+    }
+    .search-icon{
+        margin: 0
+    }
+    .slider-text{
+        width: 90%
+    }
+    .bleezy-main-slide{
+        height: 480px
+    }
+    .count-box span{
+        display: block
+    }
+    .count-box{
+        width: 100%
+    }
+    .counts-text{
+        width: 90%
+    }
+    .testimonial-slide{
+        width: 100%
+    }
+    .single-footer-widget{
+        margin-top: 0
+    }
+    .about-left{
+        margin: 0
+    }
+    .about-right{
+        margin-top: 50px
+    }
+    .thumb-service{
+        float: left;
+        width: 24.33%;
+        margin: 0 2px 20px
+    }
+    .statement-bottom-wrap{
+        margin: 0 10px;
+        padding: 0 30px
+    }
+    .no-pad-right{
+        padding-right: 15px
+    }
+    .single-service-text > h2, .about-service-right > h2, .single-service-widget > h2{
+        font-size: 22px
+    }
+    .no-pad-left{
+        padding-left: 15px
+    }
+    .about-service-right{
+        margin-top: 30px
+    }
+    .margin-top{
+        margin-top: 50px
+    }
+    .instagram li{
+        width: 10%
+    }
+    .product-button > a{
+        padding: 5px 8px;
+        margin-right: 3px
+    }
+    .single-product-text{
+        padding: 10px
+    }
+    .member-profile-contact{
+        padding: 15px
+    }
+    .notfound > h2{
+        left: -56px
+    }
+    .login-page-box{
+        width: 60%
+    }
+    
+}
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) { 
+
+    .header-right-overlay{
+        display: none
+    }
+    .mobile-top-menu{
+        display: block
+    }
+    .site-logo {
+        display: block;
+        margin: 20px 0;
+        text-align: center;
+    }
+    .header-right-top{
+        display: none
+    }
+    .mainmenu{
+        display: none
+    }
+    .bleezy-responsive-menu{
+        display: block
+    }
+    .header-search{
+        float: right
+    }
+    .header-right {
+        background: #212121 none repeat scroll 0 0;
+        padding: 0 10px;
+    }
+    .search-icon{
+        margin-top: 0;
+        padding: 15px;
+        color: #fff
+    }
+    .search-form{
+        right: 5px;
+        width: 240px
+    }
+    .dropdown-menu.cart-dropdown{
+        min-width: 280px
+    }
+    .slider-text{
+        width: 100%
+    }
+    .slider-text h2{
+        font-size: 22px;
+        line-height: 30px
+    }
+    .bleezy-main-slide{
+        height: 420px
+    }
+    .promo-heading > h2{
+        font-size: 22px;
+        line-height: 30px
+    }
+    .single-promo{
+        margin-top: 30px
+    }
+    .single-service{
+        margin-top: 60px
+    }
+    .counts-text > h3{
+        font-size: 22px
+    }
+    .counts-text{
+        width: 100%
+    }
+    .testimonial-slide{
+        width: 100%
+    }
+    .bleezy-testimonial-area .single-testimonial{
+        padding: 20px
+    }
+    .testimonial-info{
+        width: 100%
+    }
+    .bleezy-testimonial-area .single-testimonial::before{
+        font-size: 30px;
+        right: 20
+    }
+    .info-name{
+        margin-left: -15px
+    }
+    .bleezy-broucher-area{
+        background: #f26520 none repeat scroll 0 0;
+        text-align: center
+    }
+    .broucher-overlay{
+        display: none
+    }
+    .download-btn{
+        float: none
+    }
+    .download-btn > a{
+        background: #212121 none repeat scroll 0 0;
+    }
+    .download-btn > a:hover{
+        background: #d95311 none repeat scroll 0 0;
+    }
+    .footer-logo img{
+        width: 70%
+    }
+    .single-footer-widget{
+        margin: 30px 0 !Important
+    }
+    .about-left{
+        margin: 0
+    }
+    .about-right{
+        margin: 50px 0 0
+    }
+    .statement-right{
+        margin-top: 30px
+    }
+    .statement-left > h2, .statement-right > h2{
+        font-size: 22px;
+        line-height: 30px
+    }
+    .bleezy-statement-bottom-area::before{
+        display: none
+    }
+    .statement-bottom-wrap{
+        float: none;
+        padding: 0;
+        width: 100%
+    }
+    .breadcromb-top-text > h2{
+        font-size: 30px
+    }
+    .no-pad-right{
+        padding-right: 15px
+    }
+    .single-service-text > h2, .about-service-right > h2, .single-service-widget > h2{
+        font-size: 22px;
+        line-height: 30px
+    }
+    .no-pad-left{
+        padding-left: 15px
+    }
+    .about-service-right{
+        margin-top: 20px
+    }
+    .about-service-right > ul{
+        float: none;
+        width: 100%
+    }
+    .panel-title{
+        font-size: 14px
+    }
+    .margin-top{
+        margin-top: 50px
+    }
+    ul.pagination li{
+        margin: 0
+    }
+    .member-right{
+        margin-top: 30px
+    }
+    .member-profile-contact{
+        padding: 20px;
+        margin-top: 30px
+    }
+    .notfound > h2{
+        font-size: 70px;
+        line-height: 70px;
+        left: -26px;
+        top: 26px;
+        padding: 15px
+    }
+    .notfound > h3{
+        margin-top: 30px;
+        font-size: 20px
+    }
+    .login-page-box{
+        width: 100%;
+        padding: 15px
+    }
+    .shorting{
+        text-align: center
+    }
+    .shorting form{
+        float: none
+    }
+    .single-pro-page-desc{
+        margin-top: 30px
+    }
+    .single-pro-page-desc > h3{
+        font-size: 22px
+    }
+    .coupon-cart-left{
+        text-align: center
+    }
+    .coupon-cart-right{
+        text-align: center;
+        margin-top: 10px
+    }
+    .blog-text.single-blog-text > img{
+        margin-bottom: 10px;
+        margin-right: 0
+    }
+    .post-share-left{
+        text-align: center
+    }
+    .post-share-right{
+        text-align: center;
+        margin-top: 10px
+    }
+    .post-share-right > ul{
+        float: none;
+        text-align: center;
+        display: inline-block;
+    }
+    .single-comment-box.reply-comment{
+        margin-left: 30px
+    }
+    .bleezy-leave-comment input[type="text"], .bleezy-leave-comment input[type="email"]{
+        width: 100%;
+        margin-right: 0
+    }
+    .bleezy-leave-comment textarea{
+        width: 100%
+    }
+    
+}
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+
+    .header-right-overlay{
+        display: none
+    }
+    .mobile-top-menu{
+        display: block
+    }
+    .site-logo {
+        display: block;
+        margin: 20px 0;
+        text-align: center;
+    }
+    .header-right-top{
+        display: none
+    }
+    .mainmenu{
+        display: none
+    }
+    .bleezy-responsive-menu{
+        display: block
+    }
+    .header-search{
+        float: right
+    }
+    .header-right {
+        background: #212121 none repeat scroll 0 0;
+        padding: 0 10px;
+    }
+    .search-icon{
+        margin-top: 0;
+        padding: 15px;
+        color: #fff
+    }
+    .search-form{
+        right: 5px;
+        width: 240px
+    }
+    .dropdown-menu.cart-dropdown{
+        min-width: 280px
+    }
+    .slider-text{
+        width: 100%
+    }
+    .slider-text h2{
+        font-size: 22px;
+        line-height: 30px
+    }
+    .bleezy-main-slide{
+        height: 420px
+    }
+    .promo-heading > h2{
+        font-size: 22px;
+        line-height: 30px
+    }
+    .single-promo{
+        margin-top: 30px
+    }
+    .single-service{
+        margin-top: 60px
+    }
+    .counts-text > h3{
+        font-size: 22px
+    }
+    .counts-text{
+        width: 100%
+    }
+    .testimonial-slide{
+        width: 100%
+    }
+    .bleezy-testimonial-area .single-testimonial{
+        padding: 20px
+    }
+    .testimonial-info{
+        width: 100%
+    }
+    .bleezy-testimonial-area .single-testimonial::before{
+        font-size: 30px;
+        right: 20
+    }
+    .info-name{
+        margin-left: -15px
+    }
+    .bleezy-broucher-area{
+        background: #f26520 none repeat scroll 0 0;
+        text-align: center
+    }
+    .broucher-overlay{
+        display: none
+    }
+    .download-btn{
+        float: none
+    }
+    .download-btn > a{
+        background: #212121 none repeat scroll 0 0;
+    }
+    .download-btn > a:hover{
+        background: #d95311 none repeat scroll 0 0;
+    }
+    .footer-logo img{
+        width: 70%
+    }
+    .single-footer-widget{
+        margin: 30px 0 !Important
+    }
+    .about-left{
+        margin: 0
+    }
+    .about-right{
+        margin: 50px 0 0
+    }
+    .statement-right{
+        margin-top: 30px
+    }
+    .statement-left > h2, .statement-right > h2{
+        font-size: 22px;
+        line-height: 30px
+    }
+    .bleezy-statement-bottom-area::before{
+        display: none
+    }
+    .statement-bottom-wrap{
+        float: none;
+        padding: 0;
+        width: 100%
+    }
+    .breadcromb-top-text > h2{
+        font-size: 30px
+    }
+    .no-pad-right{
+        padding-right: 15px
+    }
+    .single-service-text > h2, .about-service-right > h2, .single-service-widget > h2{
+        font-size: 22px;
+        line-height: 30px
+    }
+    .no-pad-left{
+        padding-left: 15px
+    }
+    .about-service-right{
+        margin-top: 20px
+    }
+    .about-service-right > ul{
+        float: none;
+        width: 100%
+    }
+    .panel-title{
+        font-size: 14px
+    }
+    .margin-top{
+        margin-top: 50px
+    }
+    ul.pagination li{
+        margin: 0
+    }
+    .member-right{
+        margin-top: 30px
+    }
+    .member-profile-contact{
+        padding: 20px;
+        margin-top: 30px
+    }
+    .notfound > h2{
+        font-size: 70px;
+        line-height: 70px;
+        left: -26px;
+        top: 26px;
+        padding: 15px
+    }
+    .notfound > h3{
+        margin-top: 30px;
+        font-size: 20px
+    }
+    .login-page-box{
+        width: 100%;
+        padding: 15px
+    }
+    .shorting{
+        text-align: center
+    }
+    .shorting form{
+        float: none
+    }
+    .single-pro-page-desc{
+        margin-top: 30px
+    }
+    .single-pro-page-desc > h3{
+        font-size: 22px
+    }
+    .coupon-cart-left{
+        text-align: center
+    }
+    .coupon-cart-right{
+        text-align: center;
+        margin-top: 10px
+    }
+    .blog-text.single-blog-text > img{
+        margin-bottom: 10px;
+        margin-right: 0;
+        width: 100%
+    }
+    .post-share-left{
+        text-align: center
+    }
+    .post-share-right{
+        text-align: center;
+        margin-top: 10px
+    }
+    .post-share-right > ul{
+        float: none;
+        text-align: center;
+        display: inline-block;
+    }
+    .single-comment-box.reply-comment{
+        margin-left: 30px
+    }
+    .bleezy-leave-comment input[type="text"], .bleezy-leave-comment input[type="email"]{
+        width: 100%;
+        margin-right: 0
+    }
+    .bleezy-leave-comment textarea{
+        width: 100%
+    }
+    .thumb-service{
+        float: left;
+        width: 24.33%;
+        margin: 0 2px 20px
+    }
+    .thumb-service > img{
+        width: 100%
+    }
+    .instagram img{
+        width: 100%
+    }
+    
+
+}

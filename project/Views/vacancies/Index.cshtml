@@ -1,0 +1,65 @@
+﻿@model IEnumerable<project.Models.vacancy>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/shared/AdminMaster.cshtml";
+}
+
+
+
+<h3><i class="fa fa-angle-right"></i> Vacancies Details</h3>
+<div class="row mt">
+    <div class="col-lg-12">
+        <div class="content-panel">
+            @if (User.IsInRole("admin"))
+            { 
+            <h4 class="btn btn-warning"> @Html.ActionLink("Add New", "Create")</h4>
+            }
+            <hr />
+            <section id="unseen">
+                <table class="table table-bordered table-striped table-condensed">
+                    <thead>
+                        <tr>
+
+                            <th>Name</th>
+                            <th class="numeric">Discription (1)</th>
+                            <th class="numeric">Discription (2)</th>
+                            <th class="numeric">Last Date</th>
+                            <th class="numeric">Image</th>
+                         
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+
+                            <td> @Html.DisplayFor(modelItem => item.vac_title)</td>
+                            <td class="numeric"> @Html.DisplayFor(modelItem => item.vac_discrip_1)</td>
+                            <td class="numeric"> @Html.DisplayFor(modelItem => item.vac_discrip_2)</td>
+                            <td class="numeric"> @Html.DisplayFor(modelItem => item.vac_last_date)</td>
+                            <td > <img src="~/vacancyimages/@Url.Content(item.vac_image)" width="100" height="100" /> </td>
+
+                            @if(User.IsInRole("admin"))
+                            { 
+                            <td>
+                                <div class=" btn btn-danger btn-xs"><i class="fa fa-trash-o">  @Html.ActionLink("Delete", "Delete", new { id = item.vac_id })</i>  </div> 
+                            </td>
+                            <td> <div class=" btn btn-primary btn-xs"><i class="fa fa-pencil">  @Html.ActionLink("Edit", "Edit", new { id = item.vac_id }) </i>  </div> </td>
+                            }
+                            <td>  <div class=" btn btn-success btn-xs"><i class="fa fa-check">   @Html.ActionLink("Details", "Details", new { id = item.vac_id })</i>  </div>  </td>
+                        </tr>
+                        }
+                    </tbody>
+                    <tbody></tbody>
+                </table>
+            </section>
+        </div>
+        <!-- /content-panel -->
+    </div>
+    <!-- /col-lg-4 -->
+</div>
+<!-- /row -->

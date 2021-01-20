@@ -1,0 +1,61 @@
+﻿@model project.Models.Blog
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/shared/AdminMaster.cshtml";
+}
+
+<h2>Post Blog</h2>
+
+@using (Html.BeginForm("Create","Blogs",FormMethod.Post,new { enctype="multipart/form-data"}))
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4></h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label">Title</label>
+        <div class="col-md-8">
+            @Html.EditorFor(model => model.b_title, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.b_title, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label">Discription</label>
+        <div class="col-md-10">
+            @Html.TextAreaFor(model => model.b_Discrip, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.b_Discrip, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label">Date</label>
+        <div class="col-md-2">
+            @Html.EditorFor(model => model.b_date, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.b_date, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label">Photo</label>
+        <div class="col-md-8">
+           <input type="file" name="imgblog"  />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="submit" class="btn btn-theme"><i class="fa fa-check"> Post Now  </i></button>
+        </div>
+    </div>
+</div>
+}
+
+<div class="btn btn-warning btn-xs">
+    <i class="fa fa-arrow-left">   @Html.ActionLink("Back to Blog", "Index")</i>
+</div>

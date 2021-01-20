@@ -1,0 +1,598 @@
+﻿@model project.Models.service
+  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title> Service | Star Security Service </title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Frontlib/assets/img/Faviconnew.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Frontlib/assets/css/bootstrap.min.css">
+
+    <!-- Font awesome CSS -->
+    <link rel="stylesheet" href="~/Frontlib/assets/css/font-awesome.min.css">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="~/Frontlib/assets/css/animate.min.css">
+
+    <!-- OwlCarousel CSS -->
+    <link rel="stylesheet" href="~/Frontlib/assets/css/owl.carousel.css">
+
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="~/Frontlib/assets/flaticon/flaticon.css">
+
+    <!-- SlickNav CSS -->
+    <link rel="stylesheet" href="~/Frontlib/assets/css/slicknav.min.css">
+
+    <!-- Featherlight  CSS -->
+    <link rel="stylesheet" href="~/Frontlib/assets/css/featherlight.css">
+
+    <!-- Featherlight Gallery CSS -->
+    <link rel="stylesheet" href="~/Frontlib/assets/css/featherlight.gallery.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="~/Frontlib/assets/css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="~/Frontlib/assets/css/responsive.css">
+
+</head>
+<body>
+
+
+
+    <!-- Header Area Start -->
+    <header class="bleezy-header-area">
+        <div class="header-right-overlay"></div>
+        <div class="mobile-top-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <p><i class="fa fa-user"></i><a href="#">Register</a> or <a href="#">Login</a></p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <div class="cart-top-menu">
+                            <div class="login dropdown">
+                                <a href="#" class="dropdown-toggle cart-icon" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <i class="fa fa-shopping-bag"></i> Cart(02)
+                                </a>
+                                <div class="dropdown-menu cart-dropdown" aria-labelledby="dropdownMenu2">
+                                    <h3>Recently added item(s)</h3>
+                                    <ul>
+                                        <li>
+                                            <div class="cart-btn-product">
+                                                <a class="product-remove" href="#">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </a>
+                                                <div class="cart-btn-pro-img">
+                                                    <a href="#">
+                                                        <img src="~/Frontlib/assets/img/pro.png" alt="product" />
+                                                    </a>
+                                                </div>
+                                                <div class="cart-btn-pro-cont">
+                                                    <h4><a href="#">Wireless IP Camera</a></h4>
+                                                    <span class="item-cat">
+                                                        1x$30.00
+                                                    </span>
+                                                    <span class="price">
+                                                        $30.00
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cart-btn-product">
+                                                <a class="product-remove" href="#">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </a>
+                                                <div class="cart-btn-pro-img">
+                                                    <a href="#">
+                                                        <img src="~/Frontlib/assets/img/pro-2.png" alt="product" />
+                                                    </a>
+                                                </div>
+                                                <div class="cart-btn-pro-cont">
+                                                    <h4><a href="#">Door Lock System</a></h4>
+                                                    <span class="item-cat">
+                                                        1x$130.00
+                                                    </span>
+                                                    <span class="price">
+                                                        $130.00
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="cart-btn">
+                                        <a href="#" class="cart-btn-1">View Cart</a>
+                                        <a href="#" class="cart-btn-2">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="site-logo">
+                        <a href="@Url.Action("home","main")">
+                            <img src="~/Frontlib/assets/img/logonew.png" alt="site logo" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="header-right">
+                        <div class="header-right-top">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="single-top-right">
+                                        <p>Call Us: <a href="@Url.Action("contact","main")">(+92) 314-205-6597</a></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="single-top-right">
+                                        <ul>
+                                            <li><a href="https://www.facebook.com/ameerhamza006"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="https://twitter.com/ameerhamza006"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="https://pk.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+                                            <li><a href="https://accounts.google.com/"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a href="https://www.skype.com/"><i class="fa fa-skype"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="single-top-right">
+                                        <p><i class="fa fa-user"></i><!---- <a href="#">Register</a> or --> <a href="@Url.Action("login","main")">Login</a></p>
+                                        <div class="cart-top-menu">
+                                            <div class="login dropdown">
+                                                <a href="@Url.Action("sitemap","main")">
+                                                    <i class="fa fa-map"></i> SiteMap
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-container">
+                            <div class="row">
+                                <div class="col-md-11 col-sm-11">
+                                    <!-- Responsive Menu -->
+                                    <div class="bleezy-responsive-menu"></div>
+                                    <!-- Responsive Menu -->
+                                    <div class="mainmenu">
+                                        <nav>
+                                            <ul id="bleezy_navigation">
+                                                <li><a href="@Url.Action("home","main")">home</a></li>
+                                                <li><a href="@Url.Action("about","main")">about us</a></li>
+                                                <li><a href="@Url.Action("all_service","main")"> Services</a></li>
+
+                                                <li><a href="@Url.Action("careers_us","main")">Careers</a></li>
+                                                <li><a href="@Url.Action("pkgs","main")">Packages</a></li>
+                                                <li>
+                                                    <a href="#"> Our Network</a>
+                                                    <ul>
+                                                        <li><a href="@Url.Action("northRegion","main")">North Region</a></li>
+                                                        <li><a href="@Url.Action("westRegion","main")">West Region</a></li>
+                                                        <li><a href="@Url.Action("southRegion","main")">South Network</a></li>
+                                                        <li><a href="@Url.Action("eastRegion","main")">East Region</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="@Url.Action("contact","main")">contact</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="col-md-1 col-sm-1">
+                                    <div class="header-search">
+                                        <div class="search-icon">
+                                            <i class="fa fa-search"></i>
+                                        </div>
+                                        <div class="search-form">
+                                            <form>
+                                                <input type="search" placeholder="Search...">
+                                                <button type="submit"><i class="fa fa-search"></i></button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+    <!-- Breadcromb Area Start -->
+    <section class="bleezy-breadcromb-area">
+        <div class="breadcromb-top section_50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="breadcromb-top-text">
+                            <h2>service details</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="breadcromb-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="breadcromb-bottom-text">
+                            <ul>
+                                <li><a href="@Url.Action("home", "main")">home</a></li>
+                                <li><a href="#"><i class="fa fa-long-arrow-right"></i></a></li>
+                                <li><a href="#">Service</a></li>
+                                <li><a href="@Url.Action("service_details", "main")"><i class="fa fa-long-arrow-right"></i></a></li>
+                                <li>service details</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcromb Area End -->
+    <!-- Single Service Area Start -->
+    <section class="bleezy-single-service-area section_100">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-9">
+                    @using (Html.BeginForm())
+                    {
+                        <div class="single-service-left">
+                            <div class="single-service-widget clearfix">
+                                <div class="single-service-image">
+                                    <div class="row">
+                                        <div class="col-md-2 no-pad-right">
+                                            <div class="thumb-service">
+                                                <img src="~/Frontlib/assets/img/gallery-1.jpg" alt="service" />
+                                            </div>
+                                            <div class="thumb-service">
+                                                <img src="~/Frontlib/assets/img/gallery-2.jpg" alt="service" />
+                                            </div>
+                                            <div class="thumb-service">
+                                                <img src="~/Frontlib/assets/img/gallery-3.jpg" alt="service" />
+                                            </div>
+                                            <div class="thumb-service">
+                                                <img src="~/Frontlib/assets/img/gallery-2.jpg" alt="service" />
+                                            </div>
+                                            <div class="thumb-service">
+                                                <img src="~/Frontlib/assets/img/fire-squad1.jpg" alt="service" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-10">
+                                            <div class="service-widget-left-img">
+                                                <img src="~/Servicesimages/@Url.Content(Model.ser_img)" width="1000" alt="service" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-service-text">
+                                    <h2>@Model.ser_title</h2>
+                                    <p>
+
+                                        @Model.ser_discrip_2
+                                    </p>
+                                    <div class="bleezy-btn">
+                                        <a href="@Url.Action("client","main")"> Order Your Service</a>
+                                    </div>
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <div class="single-service-widget clearfix">
+                                <div class="col-md-6 no-pad-left">
+                                    <div class="about-service-left">
+                                        <img src="~/Servicesimages/@Url.Content(Model.ser_img)" />
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="about-service-right">
+                                        <h2>About Service</h2>
+                                        <p>Nemore tincidunt ea mel, eos cu alii insolens signiferumque. Te nec dolor clita partem, mea ne iuvaret aliquid. Id nam illum augue commodo, diam dolores philosophia nec. ad his </p>
+                                        <ul>
+                                            <li><i class="fa fa-check-circle"></i> Best Data Security</li>
+                                            <li><i class="fa fa-check-circle"></i> Qualified Guardst</li>
+                                            <li><i class="fa fa-check-circle"></i> Sequre Payment</li>
+                                        </ul>
+                                        <ul>
+                                            <li><i class="fa fa-check-circle"></i> guarding services</li>
+                                            <li><i class="fa fa-check-circle"></i> Unique Security </li>
+                                            <li><i class="fa fa-check-circle"></i> fire safety secure</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-service-widget clearfix">
+                                <h2>Popular Question</h2>
+                                <div class="panel-group accordion" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title finance-panel-title">
+                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse02" aria-expanded="false">
+                                                    <i class="switch fa fa-plus"></i>
+                                                    1. How to provide the personal security ?
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div class="panel-collapse collapse" id="collapse02">
+                                            <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla</div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title finance-panel-title">
+                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse03" aria-expanded="false">
+                                                    <i class="switch fa fa-plus"></i>
+                                                    2. Which technology use for home security system ?
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div class="panel-collapse collapse" id="collapse03">
+                                            <div class="panel-body">consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla</div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title finance-panel-title">
+                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse04" aria-expanded="false">
+                                                    <i class="switch fa fa-plus"></i>
+                                                    3. What is the payment process ?
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div class="panel-collapse collapse" id="collapse04">
+                                            <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla</div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title finance-panel-title">
+                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse05" aria-expanded="false">
+                                                    <i class="switch fa fa-plus"></i>
+                                                    4. How to get Appoinment ?
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div class="panel-collapse collapse" id="collapse05">
+                                            <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    }
+                </div>
+
+                <div class="col-md-3">
+                    <div class="single-service-left margin-top">
+                        <div class="single-service-left-widget">
+
+                            <ul>
+                                <li class="active">
+                                    <a href="@Url.Action("all_service","main")">
+                                        @Model.category_T.cat_title
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("all_service","main")">
+                                        cctv system
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("all_service","main")">
+                                        Trainnig
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("all_service","main")">
+                                        Physical Security
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("all_service","main")">
+                                        Cash Service
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("pkgs","main")">
+                                        Home Security
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        @*<div class="single-service-left-widget">
+                                <div class="widget-title">
+                                    <h3>Our Brochures</h3>
+                                </div>
+                                <div class="broucher-item">
+                                    <a href="@Url.Action("login", "main")">Download.Pdf <span class="fa fa-long-arrow-right"></span></a>
+                                    <i class="fa fa-file-pdf-o"></i>
+                                </div>
+                                <div class="broucher-item">
+                                    <a href="@Url.Action("login", "main")">Download.Doc <span class="fa fa-long-arrow-right"></span></a>
+                                    <i class="fa fa-file-word-o"></i>
+                                </div>
+                            </div>*@
+
+
+
+                        @*@using (Html.BeginForm("read_more", "main", FormMethod.Post))
+                            {
+
+                                <p>
+                                    <label for="name">Name</label>
+                                    @Html.TextBoxFor(a => a.client_name, new { required = "required" })
+                                    <input type="text" name="name" id="name">
+                                </p>
+                                <p>
+                                    <label for="email">Email</label>
+                                    @Html.TextBoxFor(a => a.client_email, new { required = "required" })
+                                </p>
+                                <p>
+                                    <label for="sub">Category</label>
+                                    @Html.DropDownList("client_fk_cat", null, htmlAttributes: new { @class = "form-control" })
+
+                                </p>
+                                <p>
+                                    <label for="sub">service</label>
+                                    @Html.DropDownList("client_fk_ser", null, htmlAttributes: new { @class = "form-control" })
+                                </p>
+                                <p>
+                                    <label for="msg">message</label>
+                                    @Html.TextAreaFor(a => a.client_msg, new { required = "required" })
+                                </p>
+                                <p>
+                                    <button type="submit">Send</button>
+                                </p>
+                            }*@
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+    <!-- Single Service Area End -->
+    <!-- Footer Area Start -->
+    <footer class="bleezy-footer-area">
+        <div class="footer-top-area section_50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3">
+                        <div class="single-footer-widget footer-logo-widget">
+                            <div class="footer-logo">
+                                <a href="@Url.Action("home","main")">
+                                    <img src="~/Frontlib/assets/img/Footer-logowhite.png" alt="footer logo" />
+                                </a>
+                            </div>
+                            <div class="footer-widget-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.</p>
+                                <p>Suspendisse augue sem, iaculis id fermentum sit amet, finibus eu risus.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="single-footer-widget">
+                            <h3>latest post</h3>
+                            <div class="latest-post-footer clearfix">
+                                <div class="latest-post-footer-left">
+                                    <i class="fa fa-image"></i>
+                                </div>
+                                <div class="latest-post-footer-right">
+                                    <h4><a href="@Url.Action("blog","main")">Revealed: How to set goals for you and your team</a></h4>
+                                    <p>Aprail 15, 2020</p>
+                                </div>
+                            </div>
+                            <div class="latest-post-footer clearfix">
+                                <div class="latest-post-footer-left">
+                                    <i class="fa fa-briefcase"></i>
+                                </div>
+                                <div class="latest-post-footer-right">
+                                    <h4><a href="@Url.Action("blog","main")">Five ways to improve as a business professional!</a></h4>
+                                    <p>Aprail 15, 2020</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="single-footer-widget">
+                            <h3>main links</h3>
+                            <ul>
+                                <li><a href="@Url.Action("about","main")">About us</a></li>
+                                <li><a href="@Url.Action("contact","main")">Delivery Information</a></li>
+                                <li><a href="@Url.Action("about","main")">Terms & Conditions</a></li>
+                                <li><a href="@Url.Action("about","main")">Privacy Policy</a></li>
+                                <li><a href="@Url.Action("contact","main")">Contact us</a></li>
+                                <li><a href="@Url.Action("about","main")">Return Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="single-footer-widget">
+                            <h3>Newsletter</h3>
+                            <p>Don't miss to subscribe to our news feeds, kindly fill the form below.</p>
+                            <form>
+                                <input type="email" placeholder="Subscribe">
+                                <button type="submit"><i class="fa fa-envelope-open-o"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="copyright-right">
+                            <p>&copy; Copyright <a href="@Url.Action("home","main")">Star Security Service</a> 2020. All rights reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- jQuery -->
+    <script src="~/Frontlib/assets/js/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="~/Frontlib/assets/js/bootstrap.min.js"></script>
+
+    <!-- Featherlight JS -->
+    <script src="~/Frontlib/assets/js/featherlight.js"></script>
+
+    <!-- Featherlight Gallery JS -->
+    <script src="~/Frontlib/assets/js/featherlight.gallery.js"></script>
+
+    <!-- OwlCarousel JS -->
+    <script src="~/Frontlib/assets/js/owl.carousel.min.js"></script>
+
+    <!-- SlickNav JS -->
+    <script src="~/Frontlib/assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- Gmap JS -->
+    <script src="~/Frontlib/assets/js/gmap.js"></script>
+
+    <!-- Progressbar js -->
+    <script src="~/Frontlib/assets/js/progressbar.min.js"></script>
+
+    <!-- Counter JS -->
+    <script src="~/Frontlib/assets/js/jquery.counterup.min.js"></script>
+
+    <!-- Counter JS -->
+    <script src="~/Frontlib/assets/js/waypoints-min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="~/Frontlib/assets/js/custom.js"></script>
+
+</body>
+</html>

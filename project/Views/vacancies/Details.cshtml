@@ -1,0 +1,29 @@
+﻿@model project.Models.vacancy
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/shared/AdminMaster.cshtml";
+}
+
+<h2>Details</h2>
+
+
+
+
+<div class="row content-panel text-center">
+    <hr>
+    <h4 class="title"> @Html.DisplayFor(model => model.vac_title)  </h4>
+    <p> @Html.DisplayFor(model => model.vac_discrip_1) </p>
+    <p> <img src="~/vacancyimages/@Url.Content(Model.vac_image)" width="100" height="100" /> </p>
+    <p> @Html.DisplayFor(model => model.vac_discrip_2) </p>
+    <h4 class="title">  Last Date  </h4>
+    <p> @Html.DisplayFor(model => model.vac_last_date) </p>
+
+
+    <hr>
+    <div class="btn btn-warning btn-xs">
+        @Html.ActionLink("Back To list","Index")
+    </div>
+</div>
+
+

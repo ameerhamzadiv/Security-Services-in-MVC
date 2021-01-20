@@ -1,0 +1,107 @@
+﻿@model project.Models.service
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/shared/AdminMaster.cshtml";
+}
+
+
+<h2 class="text-center">Service</h2>
+
+<h3 class="text-center">Are you sure you want to delete this Service ?</h3>
+<div class="content-panel text-center">
+    <hr>
+    <h4 class="title"> @Html.DisplayFor(model => model.ser_title)  </h4>
+    <p> @Html.DisplayFor(model => model.ser_discrip) </p>
+    <p> <img src="~/Servicesimages/@Url.Content(Model.ser_img)" width="100" height="100" /> </p>
+   
+    <p> @Html.DisplayFor(model => model.ser_discrip_2) </p>
+    <h4 class="title">  From Category  </h4>
+    <p> @Html.DisplayFor(model => model.category_T.cat_title) </p>
+
+    <hr>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <div class="btn btn-warning btn-xs">
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        </div>
+    }
+</div>
+
+
+
+
+
+@*<h2>Delete</h2>
+
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>service</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ser_title)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ser_title)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ser_discrip)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ser_discrip)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ser_img)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ser_img)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ser_img_2)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ser_img_2)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ser_discrip_2)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ser_discrip_2)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.category_T.cat_title)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.category_T.cat_title)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>*@

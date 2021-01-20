@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="starModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="b_id" />
+    </Key>
+    <Property Name="b_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="b_title" Type="nvarchar" MaxLength="50" />
+    <Property Name="b_date" Type="date" />
+    <Property Name="b_Discrip" Type="nvarchar(max)" />
+    <Property Name="b_img" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="category_T">
+    <Key>
+      <PropertyRef Name="cat_id" />
+    </Key>
+    <Property Name="cat_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cat_title" Type="nvarchar" MaxLength="50" />
+    <Property Name="cat_discrip" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="client">
+    <Key>
+      <PropertyRef Name="client_id" />
+    </Key>
+    <Property Name="client_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="client_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="client_email" Type="nvarchar" MaxLength="50" />
+    <Property Name="client_fk_Cat" Type="int" />
+    <Property Name="client_fk_ser" Type="int" />
+    <Property Name="client_msg" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="comments">
+    <Key>
+      <PropertyRef Name="c_id" />
+    </Key>
+    <Property Name="c_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="c_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="c_email" Type="date" />
+    <Property Name="c_comnt" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="contact">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="number" Type="nvarchar" MaxLength="100" />
+    <Property Name="message" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="employe_Reg">
+    <Key>
+      <PropertyRef Name="reg_id_code" />
+    </Key>
+    <Property Name="reg_id_code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="reg_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="reg_role" Type="nvarchar" MaxLength="50" />
+    <Property Name="reg_depart" Type="nvarchar" MaxLength="50" />
+    <Property Name="reg_client" Type="nvarchar" MaxLength="50" />
+    <Property Name="reg_grade" Type="nvarchar" MaxLength="50" />
+    <Property Name="reg_education" Type="nvarchar" MaxLength="50" />
+    <Property Name="reg_achieve" Type="nvarchar" MaxLength="50" />
+    <Property Name="reg_number" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="reg_email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="reg_address" Type="nvarchar" MaxLength="100" />
+    <Property Name="reg_img" Type="nvarchar(max)" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="code" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="job">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="first name" Type="nvarchar" MaxLength="50" />
+    <Property Name="last name" Type="nvarchar" MaxLength="50" />
+    <Property Name="country" Type="nvarchar" MaxLength="50" />
+    <Property Name="address" Type="nvarchar" MaxLength="100" />
+    <Property Name="city" Type="nvarchar" MaxLength="50" />
+    <Property Name="qolifi" Type="nvarchar" MaxLength="50" />
+    <Property Name="expe" Type="nvarchar" MaxLength="50" />
+    <Property Name="job name" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="number" Type="nvarchar" MaxLength="50" />
+    <Property Name="age" Type="date" />
+    <Property Name="gender" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PKG">
+    <Key>
+      <PropertyRef Name="P_id" />
+    </Key>
+    <Property Name="P_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="p_title" Type="nvarchar" MaxLength="50" />
+    <Property Name="p_price" Type="nvarchar" MaxLength="50" />
+    <Property Name="p_1" Type="nvarchar" MaxLength="50" />
+    <Property Name="p_2" Type="nvarchar" MaxLength="50" />
+    <Property Name="p_3" Type="nvarchar" MaxLength="50" />
+    <Property Name="p_4" Type="nvarchar" MaxLength="50" />
+    <Property Name="p_5" Type="nvarchar" MaxLength="50" />
+    <Property Name="p_6" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="service">
+    <Key>
+      <PropertyRef Name="ser_id" />
+    </Key>
+    <Property Name="ser_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ser_title" Type="nvarchar" MaxLength="50" />
+    <Property Name="ser_discrip" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ser_img" Type="nvarchar(max)" />
+    <Property Name="ser_fk_cat" Type="int" />
+    <Property Name="ser_img_2" Type="nvarchar(max)" />
+    <Property Name="ser_discrip_2" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="vacancy">
+    <Key>
+      <PropertyRef Name="vac_id" />
+    </Key>
+    <Property Name="vac_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vac_title" Type="nvarchar" MaxLength="50" />
+    <Property Name="vac_discrip_1" Type="nvarchar(max)" />
+    <Property Name="vac_discrip_2" Type="nvarchar(max)" />
+    <Property Name="vac_last_date" Type="nvarchar" MaxLength="50" />
+    <Property Name="vac_image" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK__client__client_f__4F7CD00D">
+    <End Role="category_T" Type="Self.category_T" Multiplicity="0..1" />
+    <End Role="client" Type="Self.client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category_T">
+        <PropertyRef Name="cat_id" />
+      </Principal>
+      <Dependent Role="client">
+        <PropertyRef Name="client_fk_Cat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__client__client_f__5070F446">
+    <End Role="service" Type="Self.service" Multiplicity="0..1" />
+    <End Role="client" Type="Self.client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="service">
+        <PropertyRef Name="ser_id" />
+      </Principal>
+      <Dependent Role="client">
+        <PropertyRef Name="client_fk_ser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__service__ser_fk___267ABA7A">
+    <End Role="category_T" Type="Self.category_T" Multiplicity="0..1" />
+    <End Role="service" Type="Self.service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category_T">
+        <PropertyRef Name="cat_id" />
+      </Principal>
+      <Dependent Role="service">
+        <PropertyRef Name="ser_fk_cat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="starModelStoreContainer">
+    <EntitySet Name="Blog" EntityType="Self.Blog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="category_T" EntityType="Self.category_T" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client" EntityType="Self.client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="comments" EntityType="Self.comments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="contact" EntityType="Self.contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="employe_Reg" EntityType="Self.employe_Reg" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="job" EntityType="Self.job" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PKG" EntityType="Self.PKG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="service" EntityType="Self.service" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vacancy" EntityType="Self.vacancy" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__client__client_f__4F7CD00D" Association="Self.FK__client__client_f__4F7CD00D">
+      <End Role="category_T" EntitySet="category_T" />
+      <End Role="client" EntitySet="client" />
+    </AssociationSet>
+    <AssociationSet Name="FK__client__client_f__5070F446" Association="Self.FK__client__client_f__5070F446">
+      <End Role="service" EntitySet="service" />
+      <End Role="client" EntitySet="client" />
+    </AssociationSet>
+    <AssociationSet Name="FK__service__ser_fk___267ABA7A" Association="Self.FK__service__ser_fk___267ABA7A">
+      <End Role="category_T" EntitySet="category_T" />
+      <End Role="service" EntitySet="service" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

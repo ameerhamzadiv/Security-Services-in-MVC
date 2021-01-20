@@ -1,0 +1,25 @@
+﻿@model project.Models.Blog
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/shared/AdminMaster.cshtml";
+}
+
+
+<h2>Details</h2>
+
+
+<div class="row content-panel text-center">
+    <hr>
+    <h4 class="title"> @Html.DisplayFor(model => model.b_title)  </h4>
+    <p> @Html.DisplayFor(model => model.b_Discrip) </p>
+    <p> <img src="~/blogimg/@Url.Content(Model.b_img)" width="100" height="100" /> </p>
+    
+    <h4 class="title">  Date  </h4>
+    <p> @Html.DisplayFor(model => model.b_date) </p>
+
+
+    <hr>
+</div>
+
+

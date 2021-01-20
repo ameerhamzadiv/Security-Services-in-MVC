@@ -1,0 +1,118 @@
+﻿@model project.Models.PKG
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/shared/AdminMaster.cshtml";
+}
+
+<h2>Details</h2>
+
+<hr>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div class="custom-box">
+                <div class="servicetitle">
+                    <h4> @Html.DisplayFor(model => model.p_title)</h4>
+                    <hr>
+                </div>
+                <div class="icn-main-container">
+                    <span class="icn-container"> @Html.DisplayFor(model => model.p_price)</span>
+                </div>
+                <p></p>
+                <ul class="pricing">
+                    <li> @Html.DisplayFor(model => model.p_1)</li>
+                    <li> @Html.DisplayFor(model => model.p_2)</li>
+                    <li> @Html.DisplayFor(model => model.p_3)</li>
+                    <li> @Html.DisplayFor(model => model.p_4)</li>
+                    <li> @Html.DisplayFor(model => model.p_5)</li>
+                    <li> @Html.DisplayFor(model => model.p_6)</li>
+                    <li></li>
+                </ul>
+               
+            </div>
+            <!-- end custombox -->
+        </div>
+    </div>
+</div>
+<hr>
+<div class="btn btn-warning btn-xs">
+    @Html.ActionLink("Back to List", "Index")
+</div>
+        <!-- end col-4 -->
+        
+        @*<div>
+                <h4>PKG</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.p_title)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.p_title)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.p_price)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.p_price)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.p_1)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.p_1)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.p_2)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.p_2)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.p_3)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.p_3)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.p_4)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.p_4)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.p_5)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.p_5)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.p_6)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.p_6)
+                    </dd>
+
+                </dl>
+            </div>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.P_id }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>*@

@@ -1,0 +1,69 @@
+﻿@model project.Models.vacancy
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/shared/AdminMaster.cshtml";
+}
+
+<h2>ADD Vacancies</h2>
+
+@using (Html.BeginForm("Create","vacancies",FormMethod.Post, new {enctype="multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>vacancy</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+<div class="form-group">
+    <label class="col-sm-2 col-sm-2 control-label">Name</label>
+    <div class="col-md-8">
+        @Html.EditorFor(model => model.vac_title, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.vac_title, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+    <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label">Discription 1</label>
+        <div class="col-md-10">
+            @Html.TextAreaFor(model => model.vac_discrip_1, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.vac_discrip_1, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label">Discription 2</label>
+        <div class="col-md-10">
+            @Html.TextAreaFor(model => model.vac_discrip_2, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.vac_discrip_2, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label">Last Date</label>
+        <div class="col-md-8">
+            @*<input type="date" name="date" />*@
+            @Html.EditorFor(model => model.vac_last_date, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.vac_last_date, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label">Photo</label>
+        <div class="col-md-8">
+            <input type="file" name="img" class="form-control" required="required" />
+        </div>
+    </div>
+    @ViewBag.vacancy
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-2">
+            <button type="submit" class="btn btn-theme"> Add Vacancy  </button>
+        </div>
+    </div>
+    <hr>
+</div>
+}
+
+<div class="btn btn-warning btn-xs">
+    <i class="fa fa-arrow-left">  @Html.ActionLink("Back to Vacancies", "Index")</i>
+</div>

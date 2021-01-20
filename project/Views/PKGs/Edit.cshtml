@@ -1,0 +1,95 @@
+﻿@model project.Models.PKG
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/shared/AdminMaster.cshtml";
+}
+
+<h2>Edit Package </h2>
+
+@using (Html.BeginForm("Edit", "PKGs", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4></h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.P_id)
+
+        <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Name :</label>
+            <div class="col-md-5">
+                @Html.EditorFor(model => model.p_title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.p_title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Price :</label>
+            <div class="col-md-5">
+                @Html.EditorFor(model => model.p_price, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.p_price, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Pkg 1 :</label>
+            <div class="col-md-5">
+                @Html.EditorFor(model => model.p_1, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.p_1, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Pkg 2 :</label>
+            <div class="col-md-5">
+                @Html.EditorFor(model => model.p_2, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.p_2, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Pkg 3 :</label>
+            <div class="col-md-5">
+                @Html.EditorFor(model => model.p_3, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.p_3, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Pkg 4 :</label>
+            <div class="col-md-5">
+                @Html.EditorFor(model => model.p_4, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.p_4, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Pkg 5 :</label>
+            <div class="col-md-5">
+                @Html.EditorFor(model => model.p_5, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.p_5, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Pkg 6 :</label>
+            <div class="col-md-5">
+                @Html.EditorFor(model => model.p_6, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.p_6, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-2">
+                <input type="submit" value="Update"  class="btn btn-success" />
+            </div>
+        </div>
+        <hr>
+    </div>
+}
+
+<div class="btn btn-warning btn-xs">
+    <i class="fa fa-arrow-left">   @Html.ActionLink("Back to PKGs", "Index")</i>
+</div>

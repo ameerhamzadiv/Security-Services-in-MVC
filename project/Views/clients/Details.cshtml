@@ -1,0 +1,82 @@
+﻿@model project.Models.client
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/shared/AdminMaster.cshtml";
+}
+
+<h2>Details</h2>
+
+
+<div class="row content-panel text-center">
+    <hr>
+   
+    <h4 class="title"> @Html.DisplayFor(model => model.client_name)  </h4>
+    <p> @Html.DisplayFor(model => model.client_email) </p>
+    <h4 class="title">  From ServiceAvaid  </h4>
+    <p> @Html.DisplayFor(model => model.category_T.cat_title) </p>
+    <h4 class="title">  From StafAsaint  </h4>
+    <p> @Html.DisplayFor(model => model.service.ser_title) </p>
+    <p> @Html.DisplayFor(model => model.client_msg) </p>
+
+
+    <hr>
+    <div class="btn btn-warning btn-xs">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</div>
+
+
+
+@*<h2>Details</h2>
+
+    <div>
+        <h4>client</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.client_name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.client_name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.client_email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.client_email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.client_msg)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.client_msg)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.category_T.cat_title)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.category_T.cat_title)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.service.ser_title)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.service.ser_title)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.client_id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@

@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="starModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="category_T">
+    <Key>
+      <PropertyRef Name="cat_id" />
+    </Key>
+    <Property Name="cat_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cat_title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cat_discrip" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="services" Relationship="Self.FK__service__ser_fk___267ABA7A" FromRole="category_T" ToRole="service" />
+    <NavigationProperty Name="clients" Relationship="starModel.FK__client__client_f__4F7CD00D" FromRole="category_T" ToRole="client" />
+  </EntityType>
+  <EntityType Name="employe_Reg">
+    <Key>
+      <PropertyRef Name="reg_id_code" />
+    </Key>
+    <Property Name="reg_id_code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="reg_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="reg_role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="reg_depart" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="reg_client" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="reg_grade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="reg_education" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="reg_achieve" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="reg_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="reg_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="reg_address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="reg_img" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="service">
+    <Key>
+      <PropertyRef Name="ser_id" />
+    </Key>
+    <Property Name="ser_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ser_title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ser_discrip" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ser_img" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ser_fk_cat" Type="Int32" />
+    <NavigationProperty Name="category_T" Relationship="Self.FK__service__ser_fk___267ABA7A" FromRole="service" ToRole="category_T" />
+    <Property Name="ser_img_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ser_discrip_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="clients" Relationship="starModel.FK__client__client_f__5070F446" FromRole="service" ToRole="client" />
+  </EntityType>
+  <Association Name="FK__service__ser_fk___267ABA7A">
+    <End Role="category_T" Type="Self.category_T" Multiplicity="0..1" />
+    <End Role="service" Type="Self.service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category_T">
+        <PropertyRef Name="cat_id" />
+      </Principal>
+      <Dependent Role="service">
+        <PropertyRef Name="ser_fk_cat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="starEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="category_T" EntityType="Self.category_T" />
+    <EntitySet Name="employe_Reg" EntityType="Self.employe_Reg" />
+    <EntitySet Name="services" EntityType="Self.service" />
+    <AssociationSet Name="FK__service__ser_fk___267ABA7A" Association="Self.FK__service__ser_fk___267ABA7A">
+      <End Role="category_T" EntitySet="category_T" />
+      <End Role="service" EntitySet="services" />
+    </AssociationSet>
+    <EntitySet Name="jobs" EntityType="starModel.job" />
+    <EntitySet Name="vacancies" EntityType="starModel.vacancy" />
+    <EntitySet Name="contacts" EntityType="starModel.contact" />
+    <EntitySet Name="Blogs" EntityType="starModel.Blog" />
+    <EntitySet Name="comments" EntityType="starModel.comment" />
+    <EntitySet Name="PKGs" EntityType="starModel.PKG" />
+    <EntitySet Name="clients" EntityType="starModel.client" />
+    <AssociationSet Name="FK__client__client_f__4F7CD00D" Association="starModel.FK__client__client_f__4F7CD00D">
+      <End Role="category_T" EntitySet="category_T" />
+      <End Role="client" EntitySet="clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK__client__client_f__5070F446" Association="starModel.FK__client__client_f__5070F446">
+      <End Role="service" EntitySet="services" />
+      <End Role="client" EntitySet="clients" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="job">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="qolifi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="expe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="job_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="age" Type="DateTime" Precision="0" />
+    <Property Name="gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vacancy">
+    <Key>
+      <PropertyRef Name="vac_id" />
+    </Key>
+    <Property Name="vac_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vac_title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="vac_discrip_1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vac_discrip_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vac_last_date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="vac_image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="contact">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="number" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="b_id" />
+    </Key>
+    <Property Name="b_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="b_title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="b_date" Type="DateTime" Precision="0" />
+    <Property Name="b_Discrip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="b_img" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="comment">
+    <Key>
+      <PropertyRef Name="c_id" />
+    </Key>
+    <Property Name="c_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="c_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="c_email" Type="DateTime" Precision="0" />
+    <Property Name="c_comnt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PKG">
+    <Key>
+      <PropertyRef Name="P_id" />
+    </Key>
+    <Property Name="P_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="p_title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="p_price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="p_1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="p_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="p_3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="p_4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="p_5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="p_6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="client">
+    <Key>
+      <PropertyRef Name="client_id" />
+    </Key>
+    <Property Name="client_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="client_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="client_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="client_fk_Cat" Type="Int32" />
+    <Property Name="client_fk_ser" Type="Int32" />
+    <Property Name="client_msg" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="category_T" Relationship="starModel.FK__client__client_f__4F7CD00D" FromRole="client" ToRole="category_T" />
+    <NavigationProperty Name="service" Relationship="starModel.FK__client__client_f__5070F446" FromRole="client" ToRole="service" />
+  </EntityType>
+  <Association Name="FK__client__client_f__4F7CD00D">
+    <End Type="starModel.category_T" Role="category_T" Multiplicity="0..1" />
+    <End Type="starModel.client" Role="client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category_T">
+        <PropertyRef Name="cat_id" />
+      </Principal>
+      <Dependent Role="client">
+        <PropertyRef Name="client_fk_Cat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__client__client_f__5070F446">
+    <End Type="starModel.service" Role="service" Multiplicity="0..1" />
+    <End Type="starModel.client" Role="client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="service">
+        <PropertyRef Name="ser_id" />
+      </Principal>
+      <Dependent Role="client">
+        <PropertyRef Name="client_fk_ser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
